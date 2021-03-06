@@ -1,0 +1,87 @@
+{
+    "template": 0,
+    "person": {
+        "firstName": "Dylan",
+        "lastName": "O'Leary",
+        "position": "Full Stack Engineer",
+        "skills": ["TypeScript", "React", "Node"],
+        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum velit. Etiam bibendum blandit posuere. Duis purus libero, rutrum in diam at, iaculis euismod odio. Fusce hendrerit libero ac metus ullamcorper, eu accumsan nisl finibus. Quisque finibus, ex ut cursus tempus, lectus neque vehicula purus, sed tempor felis nulla vel purus. Aliquam ullamcorper, sem eget ultricies facilisis, sem lectus varius urna, non fringilla justo eros sodales tellus.",
+        "links": {
+            "email": "dylanolearydev@gmail.com",
+            "facebook": null,
+            "instagram": null,
+            "linkedin": "https://www.linkedin.com/in/dylan-o-leary-907514150/",
+            "phone": null,
+            "twitter": "https://twitter.com/dylanolearydev",
+            "website": "https://www.dylanoleary.dev/"
+        }
+    },
+    "content": [
+        {
+            "title": "Experience",
+            "order": 0,
+            "content": [
+                {
+                    "title": "Full Stack Engineer",
+                    "startDate": "2020-08-10",
+                    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum velit. Etiam bibendum blandit posuere. Duis purus libero, rutrum in diam at, iaculis euismod odio.",
+                    "order": 0
+                },
+                {
+                    "title": "Web Developer",
+                    "startDate": "2020-01-01",
+                    "endDate": "2020-08-01",
+                    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum velit. Etiam bibendum blandit posuere. Duis purus libero, rutrum in diam at, iaculis euismod odio.",
+                    "order": 1
+                },
+                {
+                    "title": "Web Developer (Co-op)",
+                    "startDate": "2019-09-01",
+                    "endDate": "2020-12-31",
+                    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum velit. Etiam bibendum blandit posuere. Duis purus libero, rutrum in diam at, iaculis euismod odio.",
+                    "order": 2
+                }
+            ]
+        },
+        {
+            "title": "Education",
+            "order": 1,
+            "content": [
+                {
+                    "title": "Georgian College - Computer Programming",
+                    "startDate": "2017-09-01",
+                    "endDate": "2019-12-31",
+                    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum velit. Etiam bibendum blandit posuere. Duis purus libero, rutrum in diam at, iaculis euismod odio.",
+                    "order": 0
+                },
+                {
+                    "title": "York University - BSc (Psychology)",
+                    "startDate": "2011-09-01",
+                    "endDate": "2016-04-01",
+                    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum velit. Etiam bibendum blandit posuere. Duis purus libero, rutrum in diam at, iaculis euismod odio.",
+                    "order": 1
+                }
+            ]
+        },
+        {
+            "title": "Certifications",
+            "order": 2,
+            "content": [
+                {
+                    "title": "Georgian College - Computer Programming",
+                    "startDate": "2017-09-01",
+                    "endDate": "2019-12-31",
+                    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum velit. Etiam bibendum blandit posuere. Duis purus libero, rutrum in diam at, iaculis euismod odio.",
+                    "order": 0
+                },
+                {
+                    "title": "York University - BSc (Psychology)",
+                    "startDate": "2011-09-01",
+                    "endDate": "2016-04-01",
+                    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum velit. Etiam bibendum blandit posuere. Duis purus libero, rutrum in diam at, iaculis euismod odio.",
+                    "order": 1
+                }
+            ]
+        }
+    ]
+}
