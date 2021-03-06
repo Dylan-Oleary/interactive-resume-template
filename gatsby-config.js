@@ -1,8 +1,12 @@
 module.exports = {
     siteMetadata: {
+        author: "Dylan O'Leary",
+        description:
+            "A template for developing super fast, interactive resumes",
+        lang: "en",
         title: "Interactive Resume Template",
-        siteUrl: "https://github.com/Dylan-Oleary/interactive-resume-template",
-        description: "A template for developing super fast, interactive resumes"
+        twitter: "@dylanolearydev",
+        siteUrl: "https://github.com/Dylan-Oleary/interactive-resume-template"
     },
     plugins: [
         "gatsby-plugin-image",
@@ -12,7 +16,15 @@ module.exports = {
         {
             resolve: "gatsby-plugin-manifest",
             options: {
-                icon: "src/images/icon.png"
+                name: "Dylan O'Leary",
+                short_name: "Dylan O'Leary",
+                start_url: "/",
+                background_color: "#2C9E92",
+                theme_color: "#2C9E92",
+                display: "minimal-ui",
+                icon: "src/images/devfavicon.png",
+                description:
+                    "A template for developing super fast, interactive resumes"
             }
         },
         "gatsby-plugin-sharp",

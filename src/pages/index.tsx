@@ -1,7 +1,13 @@
 import React, { FC } from "react";
 
-const IndexPage: FC<null> = () => {
-    return <div className="">Index</div>;
+import { Layout } from "../components";
+
+const IndexPage: FC = () => {
+    return (
+        <Layout>
+            <div>Index!</div>
+        </Layout>
+    );
 };
 
 export default IndexPage;
