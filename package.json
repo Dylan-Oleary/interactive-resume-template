@@ -1,31 +1,49 @@
 {
-  "name": "interactive-resume",
-  "version": "1.0.0",
-  "private": true,
-  "description": "interactive-resume",
-  "author": "Dylan O'Leary",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "gatsby": "^3.0.1",
-    "gatsby-plugin-google-analytics": "^3.0.0",
-    "gatsby-plugin-image": "^1.0.0",
-    "gatsby-plugin-manifest": "^3.0.0",
-    "gatsby-plugin-react-helmet": "^4.0.0",
-    "gatsby-plugin-sharp": "^3.0.0",
-    "gatsby-plugin-sitemap": "^3.0.0",
-    "gatsby-source-filesystem": "^3.0.0",
-    "gatsby-transformer-sharp": "^3.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
-  }
+    "name": "interactive-resume",
+    "version": "1.0.0",
+    "private": true,
+    "description": "interactive-resume",
+    "author": "Dylan O'Leary <dylanolearydev@gmail.com>",
+    "keywords": [
+        "gatsby"
+    ],
+    "scripts": {
+        "dev": "gatsby develop",
+        "start": "gatsby develop",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "format": "prettier --config .prettierrc './src/**/*.{mdx,js,jsx,ts,tsx}' './*.{json,js,ts}' --write",
+        "lint": "eslint .",
+        "lint:fix": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet --fix",
+        "prettier": "prettier --check .prettierrc './src/**/*.{mdx,js,jsx,ts,tsx}' './*.{json,js,ts}'"
+    },
+    "dependencies": {
+        "autoprefixer": "^10.2.5",
+        "gatsby": "^3.0.1",
+        "gatsby-plugin-google-analytics": "^3.0.0",
+        "gatsby-plugin-image": "^1.0.0",
+        "gatsby-plugin-manifest": "^3.0.0",
+        "gatsby-plugin-postcss": "^4.0.0",
+        "gatsby-plugin-react-helmet": "^4.0.0",
+        "gatsby-plugin-sharp": "^3.0.0",
+        "gatsby-plugin-sitemap": "^3.0.0",
+        "gatsby-source-filesystem": "^3.0.0",
+        "gatsby-transformer-sharp": "^3.0.0",
+        "postcss": "^8.2.7",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-helmet": "^6.1.0"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.16.1",
+        "@typescript-eslint/parser": "^4.16.1",
+        "eslint": "^7.21.0",
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-react": "^7.22.0",
+        "prettier": "^2.2.1",
+        "tailwindcss": "^2.0.3",
+        "typescript": "^4.2.3"
+    }
 }
