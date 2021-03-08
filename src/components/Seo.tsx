@@ -1,15 +1,10 @@
 import React, { FC } from "react";
 import Helmet from "react-helmet";
 
+import { ISiteMetaData } from "../templates";
+
 interface ISeoProps {
-    data: {
-        author: string;
-        description: string;
-        lang: string;
-        siteUrl: string;
-        title: string;
-        twitter?: string;
-    };
+    data: ISiteMetaData;
 }
 
 const Seo: FC<ISeoProps> = ({ data }) => {

@@ -45,6 +45,7 @@ module.exports = {
                 path: "./src/data/"
             },
             __key: "data"
-        }
+        },
+        "gatsby-plugin-ts-config"
     ]
 };
