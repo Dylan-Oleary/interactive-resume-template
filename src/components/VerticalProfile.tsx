@@ -23,7 +23,10 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
 
     return (
         <div className={classNames.list()}>
-            <Avatar image={person.profileImageData} />
+            <Avatar
+                alt={`Headshot of ${person.firstName} ${person.lastName}`}
+                image={person.profileImageData}
+            />
         </div>
     );
 };
