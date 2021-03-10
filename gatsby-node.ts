@@ -103,7 +103,7 @@ exports.createPages = async ({ actions, graphql }) => {
             file(relativePath: { eq: "${dataJson.person.profileImage}" }) {
                 childImageSharp {
                     gatsbyImageData(
-                        width: 250
+                        width: 175
                         aspectRatio: 1
                         placeholder: BLURRED
                         formats: [AUTO, WEBP, AVIF]

@@ -1,18 +1,24 @@
 import React, { FC } from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 interface IAvatarProps {
-    image: any;
+    /**
+     * The image's alt text
+     */
+    alt: string;
+    /**
+     * The Gatsby image data
+     */
+    image: IGatsbyImageData;
 }
 
-const Avatar: FC<IAvatarProps> = ({ image }) => {
+const Avatar: FC<IAvatarProps> = ({
+    alt = "Profile picture avatar",
+    image
+}) => {
     return (
         <div className="flex justify-center">
-            <GatsbyImage
-                className="w-48 h-48 rounded-full"
-                image={image}
-                alt="Profile Picture"
-            />
+            <GatsbyImage className="rounded-full" image={image} alt={alt} />
         </div>
     );
 };

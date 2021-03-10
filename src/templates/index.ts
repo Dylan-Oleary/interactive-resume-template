@@ -1,3 +1,5 @@
+import { IGatsbyImageData } from "gatsby-plugin-image";
+
 interface IBaseTemplateProps {
     pageContext: {
         meta: ISiteMetaData;
@@ -12,7 +14,7 @@ interface IPerson {
     position: string;
     skills: string[];
     summary: string;
-    profileImageData: IImageData;
+    profileImageData: IGatsbyImageData;
     links?: IPersonLinks;
 }
 
@@ -24,13 +26,6 @@ interface IPersonLinks {
     phone?: string;
     twitter?: string;
     website?: string;
-}
-
-interface IImageData {
-    layout: string;
-    srcSet: string;
-    width?: number;
-    height?: number;
 }
 
 interface IBlock {
