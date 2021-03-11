@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import "fontsource-roboto";
 
 import { IBaseTemplateProps } from "./index";
 import {
@@ -28,12 +29,14 @@ const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
                 <div className="w-3/4 p-8 space-y-6">
                     <div>
                         <Title className="text-primary">
-                            {person.firstName}
+                            {person.firstName} {person.lastName}
                         </Title>
-                        <Title className="text-primary">
-                            {person.lastName}
-                        </Title>
-                        <Header type={HeaderType.H2}>{person.position}</Header>
+                        <Header type={HeaderType.H2} className="leading-none">
+                            <div className="flex text-block-primary-text">
+                                <span>{person.position}</span>
+                                <span className="my-auto h-0.25 bg-divider flex-grow ml-16"></span>
+                            </div>
+                        </Header>
                     </div>
                     <div className="space-y-6">
                         {blocks
@@ -44,7 +47,7 @@ const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
                                     content={content}
                                     title={
                                         <Header
-                                            className="font-bold"
+                                            className="font-semibold"
                                             type={HeaderType.H2}
                                             underline={
                                                 <Divider

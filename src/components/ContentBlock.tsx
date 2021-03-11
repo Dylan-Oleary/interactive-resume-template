@@ -43,7 +43,10 @@ const ContentBlock: FC<IContentBlockProps> = ({
                                   .toString()
                             : "Present"}
                     </div>
-                    <Header type={HeaderType.H4} className="font-medium">
+                    <Header
+                        type={HeaderType.H4}
+                        className="font-medium text-block-primary-text"
+                    >
                         {content.title}
                     </Header>
                     <p className="mt-4 text-block-content-text">

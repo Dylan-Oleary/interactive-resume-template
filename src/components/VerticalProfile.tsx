@@ -47,7 +47,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                 {summary && (
                     <div>
                         <Header
-                            className="font-bold"
+                            className="font-semibold"
                             type={HeaderType.H2}
                             underline={
                                 <Divider
@@ -63,7 +63,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                 )}
                 <div>
                     <Header
-                        className="font-bold"
+                        className="font-semibold"
                         type={HeaderType.H2}
                         underline={
                             <Divider
@@ -78,7 +78,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                 {Object.keys(links).length > 0 && (
                     <div>
                         <Header
-                            className="font-bold"
+                            className="font-semibold tracking-wide"
                             type={HeaderType.H2}
                             underline={
                                 <Divider
@@ -103,7 +103,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                 {skills.length > 0 && (
                     <div>
                         <Header
-                            className="font-bold"
+                            className="font-semibold"
                             type={HeaderType.H2}
                             underline={
                                 <Divider

@@ -18,9 +18,12 @@ module.exports = {
                 "primary-lightest": "#EC4D57",
                 "nav-text": "#FFF",
                 "block-header": "#A0000B",
-                "block-content-text": "#6B7280"
+                "block-primary-text": "#272B30",
+                "block-content-text": "#6B7280",
+                divider: "#6B7280"
             },
             height: {
+                0.25: "0.0625rem",
                 0.75: "0.1875rem"
             },
             fontSize: {
