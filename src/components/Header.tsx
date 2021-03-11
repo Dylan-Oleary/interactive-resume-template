@@ -1,4 +1,4 @@
-import React, { FC, ReactElement } from "react";
+import React, { FC, ReactElement, ReactNode } from "react";
 
 enum HeaderType {
     H1 = "h1",
@@ -18,12 +18,17 @@ interface IHeaderProps {
      * The type of header element to render
      */
     type?: HeaderType;
+    /**
+     * An element used as a custom underline
+     */
+    underline?: ReactNode;
 }
 
 const Header: FC<IHeaderProps> = ({
     children,
     className = "",
-    type = HeaderType.H1
+    type = HeaderType.H1,
+    underline
 }) => {
     const createHeader: () => ReactElement = () => {
         let element: ReactElement;
@@ -93,7 +98,12 @@ const Header: FC<IHeaderProps> = ({
         return element;
     };
 
-    return createHeader();
+    return (
+        <>
+            {createHeader()}
+            {underline}
+        </>
+    );
 };
 
 export default Header;

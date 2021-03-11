@@ -1,9 +1,9 @@
 {
     "template": "Default",
     "person": {
-        "firstName": "Dylan",
-        "lastName": "O'Leary",
-        "profileImage": "headshot.jpg",
+        "firstName": "Super",
+        "lastName": "Mario",
+        "profileImage": "mario.png",
         "position": "Full Stack Engineer",
         "skills": ["TypeScript", "React", "Node"],
         "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum velit. Etiam bibendum blandit posuere. Duis purus libero, rutrum in diam at, iaculis euismod odio. Fusce hendrerit libero ac metus ullamcorper, eu accumsan nisl finibus. Quisque finibus, ex ut cursus tempus, lectus neque vehicula purus, sed tempor felis nulla vel purus. Aliquam ullamcorper, sem eget ultricies facilisis, sem lectus varius urna, non fringilla justo eros sodales tellus.",

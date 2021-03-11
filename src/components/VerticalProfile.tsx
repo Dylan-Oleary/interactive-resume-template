@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { ClassNames } from "@44north/classnames";
 
-import { Avatar, Header, HeaderType } from "./index";
+import { Avatar, Divider, DividerSpacing, Header, HeaderType } from "./index";
 import { IPerson } from "../templates";
 
 interface IVerticalProfileProps {
@@ -43,42 +43,82 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                 alt={`Headshot of ${firstName} ${lastName}`}
                 image={profileImageData}
             />
-            <div className="mt-4 space-y-2 text-white">
+            <div className="mt-4 space-y-2 text-nav-text">
                 {summary && (
                     <div>
-                        <Header className="font-bold" type={HeaderType.H2}>
+                        <Header
+                            className="font-bold"
+                            type={HeaderType.H2}
+                            underline={
+                                <Divider
+                                    className="w-24 h-0.75 ml-2 -mt-1 font-bold rounded bg-nav-text"
+                                    spacing={DividerSpacing.None}
+                                />
+                            }
+                        >
                             Summary
                         </Header>
-                        <p>{summary}</p>
+                        <p className="mt-4">{summary}</p>
                     </div>
                 )}
                 <div>
-                    <Header className="font-bold" type={HeaderType.H2}>
+                    <Header
+                        className="font-bold"
+                        type={HeaderType.H2}
+                        underline={
+                            <Divider
+                                className="w-24 h-0.75 ml-2 -mt-1 font-bold rounded bg-nav-text"
+                                spacing={DividerSpacing.None}
+                            />
+                        }
+                    >
                         Download
                     </Header>
                 </div>
                 {Object.keys(links).length > 0 && (
                     <div>
-                        <Header className="font-bold" type={HeaderType.H2}>
+                        <Header
+                            className="font-bold"
+                            type={HeaderType.H2}
+                            underline={
+                                <Divider
+                                    className="w-24 h-0.75 ml-2 -mt-1 font-bold rounded bg-nav-text"
+                                    spacing={DividerSpacing.None}
+                                />
+                            }
+                        >
                             Links
                         </Header>
-                        {links.email && <p>{links.email}</p>}
-                        {links.facebook && <p>{links.facebook}</p>}
-                        {links.instagram && <p>{links.instagram}</p>}
-                        {links.linkedin && <p>{links.linkedin}</p>}
-                        {links.phone && <p>{links.phone}</p>}
-                        {links.twitter && <p>{links.twitter}</p>}
-                        {links.website && <p>{links.website}</p>}
+                        <div className="mt-4">
+                            {links.email && <p>{links.email}</p>}
+                            {links.facebook && <p>{links.facebook}</p>}
+                            {links.instagram && <p>{links.instagram}</p>}
+                            {links.linkedin && <p>{links.linkedin}</p>}
+                            {links.phone && <p>{links.phone}</p>}
+                            {links.twitter && <p>{links.twitter}</p>}
+                            {links.website && <p>{links.website}</p>}
+                        </div>
                     </div>
                 )}
                 {skills.length > 0 && (
                     <div>
-                        <Header className="font-bold" type={HeaderType.H2}>
+                        <Header
+                            className="font-bold"
+                            type={HeaderType.H2}
+                            underline={
+                                <Divider
+                                    className="w-24 h-0.75 ml-2 -mt-1 font-bold rounded bg-nav-text"
+                                    spacing={DividerSpacing.None}
+                                />
+                            }
+                        >
                             Skills
                         </Header>
-                        {skills.map((skill, index) => (
-                            <div key={`skill-${index}`}>{skill}</div>
-                        ))}
+                        <div className="mt-4">
+                            {skills.map((skill, index) => (
+                                <div key={`skill-${index}`}>{skill}</div>
+                            ))}
+                        </div>
                     </div>
                 )}
             </div>

@@ -15,7 +15,13 @@ module.exports = {
                 "primary-darkest": "#A0000B",
                 "primary-light": "#E71A27",
                 "primary-lighter": "#E933F",
-                "primary-lightest": "#EC4D57"
+                "primary-lightest": "#EC4D57",
+                "nav-text": "#FFF",
+                "block-header": "#A0000B",
+                "block-content-text": "#6B7280"
+            },
+            height: {
+                0.75: "0.1875rem"
             },
             fontSize: {
                 title: "4rem",

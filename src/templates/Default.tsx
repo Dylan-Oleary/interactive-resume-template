@@ -2,6 +2,9 @@ import React, { FC } from "react";
 
 import { IBaseTemplateProps } from "./index";
 import {
+    ContentBlock,
+    Divider,
+    DividerSpacing,
     Header,
     HeaderType,
     Seo,
@@ -22,7 +25,7 @@ const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
                     person={person}
                     useGradient
                 />
-                <div className="flex-grow p-8">
+                <div className="w-3/4 p-8 space-y-6">
                     <div>
                         <Title className="text-primary">
                             {person.firstName}
@@ -30,12 +33,34 @@ const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
                         <Title className="text-primary">
                             {person.lastName}
                         </Title>
-                        <div className="flex">
-                            <Header type={HeaderType.H2}>
-                                {person.position}
-                            </Header>
-                            <div className="flex-grow w-auto h-0.5 ml-8 bg-gray-400"></div>
-                        </div>
+                        <Header type={HeaderType.H2}>{person.position}</Header>
+                    </div>
+                    <div className="space-y-6">
+                        {blocks
+                            .sort((a, b) => a?.order - b?.order)
+                            .map(({ content, title }, index) => (
+                                <ContentBlock
+                                    key={`$content-block-${index}`}
+                                    content={content}
+                                    title={
+                                        <Header
+                                            className="font-bold"
+                                            type={HeaderType.H2}
+                                            underline={
+                                                <Divider
+                                                    className="w-24 h-0.75 ml-2 -mt-1 font-bold rounded bg-block-header"
+                                                    spacing={
+                                                        DividerSpacing.None
+                                                    }
+                                                />
+                                            }
+                                        >
+                                            {title}
+                                        </Header>
+                                    }
+                                    showDivider={index !== blocks.length - 1}
+                                />
+                            ))}
                     </div>
                 </div>
             </main>
