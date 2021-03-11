@@ -10,6 +10,10 @@ interface IContentBlockProps {
      */
     content: IBlockContent[];
     /**
+     * A stringified SVG used for icon display
+     */
+    icon?: ReactNode;
+    /**
      * Determines whether a divider should render underneath the block
      */
     showDivider?: boolean;
@@ -22,10 +26,14 @@ interface IContentBlockProps {
 const ContentBlock: FC<IContentBlockProps> = ({
     content,
     showDivider = false,
-    title = "Content Block"
+    title = "Content Block",
+    icon
 }) => (
     <div>
-        <div className="text-block-header">{title}</div>
+        <div className={`${icon ? "flex" : ""} items-center text-block-header`}>
+            <div className="mr-2">{icon && icon}</div>
+            <div>{title}</div>
+        </div>
         <div className="flex flex-col flex-wrap justify-between md:flex-row">
             {content.map((content, index) => (
                 <div

@@ -30,6 +30,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         type DataJsonBlocks implements Node {
             title: String!
             order: Int!
+            icon: String
             content: [DataJsonBlocksContent]
         }
 
@@ -73,6 +74,7 @@ exports.createPages = async ({ actions, graphql }) => {
                 }
                 blocks {
                     title
+                    icon
                     order
                     content {
                         title

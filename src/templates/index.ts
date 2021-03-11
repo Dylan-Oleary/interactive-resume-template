@@ -30,6 +30,7 @@ interface IPersonLinks {
 
 interface IBlock {
     title: string;
+    icon?: string;
     order: number;
     content: IBlockContent[];
 }

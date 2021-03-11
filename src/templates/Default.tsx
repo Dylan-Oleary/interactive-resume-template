@@ -8,6 +8,7 @@ import {
     DividerSpacing,
     Header,
     HeaderType,
+    Icon,
     Seo,
     Title,
     VerticalProfile,
@@ -41,10 +42,18 @@ const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
                     <div className="space-y-6">
                         {blocks
                             .sort((a, b) => a?.order - b?.order)
-                            .map(({ content, title }, index) => (
+                            .map(({ content, icon, title }, index) => (
                                 <ContentBlock
                                     key={`$content-block-${index}`}
                                     content={content}
+                                    icon={
+                                        icon ? (
+                                            <Icon
+                                                icon={icon}
+                                                className="p-2 text-white rounded-full bg-block-header"
+                                            />
+                                        ) : null
+                                    }
                                     title={
                                         <Header
                                             className="font-semibold"
