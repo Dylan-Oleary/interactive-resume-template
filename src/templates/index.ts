@@ -18,14 +18,19 @@ interface IPerson {
     links?: IPersonLinks;
 }
 
+interface IPersonLink {
+    label: string;
+    link: string;
+}
+
 interface IPersonLinks {
-    email?: string;
-    facebook?: string;
-    instagram?: string;
-    linkedin?: string;
-    phone?: string;
-    twitter?: string;
-    website?: string;
+    email?: IPersonLink;
+    facebook?: IPersonLink;
+    instagram?: IPersonLink;
+    linkedin?: IPersonLink;
+    phone?: IPersonLink;
+    twitter?: IPersonLink;
+    website?: IPersonLink;
 }
 
 interface IBlock {
@@ -57,6 +62,7 @@ export {
     IBlock,
     IBlockContent,
     IPerson,
+    IPersonLink,
     IPersonLinks,
     ISiteMetaData
 };

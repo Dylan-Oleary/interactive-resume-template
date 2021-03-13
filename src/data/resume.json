@@ -8,13 +8,25 @@
         "skills": ["TypeScript", "React", "Node"],
         "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum velit. Etiam bibendum blandit posuere. Duis purus libero, rutrum in diam at, iaculis euismod odio. Fusce hendrerit libero ac metus ullamcorper, eu accumsan nisl finibus. Quisque finibus, ex ut cursus tempus, lectus neque vehicula purus, sed tempor felis nulla vel purus. Aliquam ullamcorper, sem eget ultricies facilisis, sem lectus varius urna, non fringilla justo eros sodales tellus.",
         "links": {
-            "email": "dylanolearydev@gmail.com",
+            "email": {
+                "label": "dylanolearydev@gmail.com",
+                "link": "mailto:dylanolearydev@gmail.com"
+            },
             "facebook": null,
             "instagram": null,
-            "linkedin": "https://www.linkedin.com/in/dylan-o-leary-907514150/",
+            "linkedin": {
+                "label": "LinkedIn",
+                "link": "https://www.linkedin.com/in/dylan-o-leary-907514150/"
+            },
             "phone": null,
-            "twitter": "https://twitter.com/dylanolearydev",
-            "website": "https://www.dylanoleary.dev/"
+            "twitter": {
+                "label": "@dylanolearydev",
+                "link": "https://twitter.com/dylanolearydev"
+            },
+            "website": {
+                "label": "Portfolio",
+                "link": "https://www.dylanoleary.dev/"
+            }
         }
     },
     "blocks": [

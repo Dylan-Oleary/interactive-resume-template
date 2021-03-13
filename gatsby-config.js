@@ -46,6 +46,14 @@ module.exports = {
             },
             __key: "data"
         },
-        "gatsby-plugin-ts-config"
+        "gatsby-plugin-ts-config",
+        {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+                rule: {
+                    include: /src\/icons/
+                }
+            }
+        }
     ]
 };

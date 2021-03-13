@@ -1,7 +1,24 @@
 import React, { FC } from "react";
 import { ClassNames } from "@44north/classnames";
 
-import { Avatar, Divider, DividerSpacing, Header, HeaderType } from "./index";
+import {
+    Avatar,
+    Divider,
+    DividerSpacing,
+    Header,
+    HeaderType,
+    Link
+} from "./index";
+import {
+    DownloadIcon,
+    EmailIcon,
+    FacebookIcon,
+    InstagramIcon,
+    LinkedinIcon,
+    PhoneIcon,
+    TwitterIcon,
+    WebIcon
+} from "../icons";
 import { IPerson } from "../templates";
 
 interface IVerticalProfileProps {
@@ -89,14 +106,91 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                         >
                             Links
                         </Header>
-                        <div className="mt-4">
-                            {links.email && <p>{links.email}</p>}
-                            {links.facebook && <p>{links.facebook}</p>}
-                            {links.instagram && <p>{links.instagram}</p>}
-                            {links.linkedin && <p>{links.linkedin}</p>}
-                            {links.phone && <p>{links.phone}</p>}
-                            {links.twitter && <p>{links.twitter}</p>}
-                            {links.website && <p>{links.website}</p>}
+                        <div className="mt-4 space-y-2">
+                            {links.email && (
+                                <Link
+                                    href={links.email.link}
+                                    openNewTab
+                                    className="flex items-center"
+                                >
+                                    <EmailIcon className="w-7 h-7" />
+                                    <span className="ml-2">
+                                        {links.email.label}
+                                    </span>
+                                </Link>
+                            )}
+                            {links.twitter && (
+                                <Link
+                                    href={links.twitter.link}
+                                    openNewTab
+                                    className="flex items-center"
+                                >
+                                    <TwitterIcon className="w-7 h-7" />
+                                    <span className="ml-2">
+                                        {links.twitter.label}
+                                    </span>
+                                </Link>
+                            )}
+                            {links.facebook && (
+                                <Link
+                                    href={links.facebook.link}
+                                    openNewTab
+                                    className="flex items-center"
+                                >
+                                    <FacebookIcon className="w-7 h-7" />
+                                    <span className="ml-2">
+                                        {links.facebook.label}
+                                    </span>
+                                </Link>
+                            )}
+                            {links.instagram && (
+                                <Link
+                                    href={links.instagram.link}
+                                    openNewTab
+                                    className="flex items-center"
+                                >
+                                    <InstagramIcon className="w-7 h-7" />
+                                    <span className="ml-2">
+                                        {links.instagram.label}
+                                    </span>
+                                </Link>
+                            )}
+                            {links.linkedin && (
+                                <Link
+                                    href={links.linkedin.link}
+                                    openNewTab
+                                    className="flex items-center"
+                                >
+                                    <LinkedinIcon className="w-7 h-7" />
+                                    <span className="ml-2">
+                                        {links.linkedin.label}
+                                    </span>
+                                </Link>
+                            )}
+                            {links.phone && (
+                                <Link
+                                    href={links.phone.link}
+                                    openNewTab
+                                    className="flex items-center"
+                                >
+                                    <PhoneIcon className="w-7 h-7" />
+                                    <span className="ml-2">
+                                        {links.phone.label}
+                                    </span>
+                                </Link>
+                            )}
+                            {links.website && (
+                                <Link
+                                    href={links.website.link}
+                                    openNewTab
+                                    className="flex items-center"
+                                >
+                                    <WebIcon className="w-7 h-7" />
+                                    <span className="ml-2">
+                                        {links.website.label}
+                                    </span>
+                                </Link>
+                            )}
                         </div>
                     </div>
                 )}

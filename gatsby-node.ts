@@ -17,14 +17,19 @@ exports.createSchemaCustomization = ({ actions }) => {
             links: DataJsonPersonLinks
         }
 
+        type DataJsonPersonLink implements Node {
+            label: String!
+            link: String!
+        }
+
         type DataJsonPersonLinks implements Node {
-            email: String
-            facebook: String
-            instagram: String
-            linkedin: String
-            phone: String
-            twitter: String
-            website: String
+            email: DataJsonPersonLink
+            facebook: DataJsonPersonLink
+            instagram: DataJsonPersonLink
+            linkedin: DataJsonPersonLink
+            phone: DataJsonPersonLink
+            twitter: DataJsonPersonLink
+            website: DataJsonPersonLink
         }
 
         type DataJsonBlocks implements Node {
@@ -63,13 +68,34 @@ exports.createPages = async ({ actions, graphql }) => {
                     skills
                     summary
                     links {
-                        email
-                        facebook
-                        instagram
-                        linkedin
-                        phone
-                        twitter
-                        website
+                        email {
+                            label
+                            link
+                        }
+                        facebook {
+                            label
+                            link
+                        }
+                        instagram {
+                            label
+                            link
+                        }
+                        linkedin {
+                            label
+                            link
+                        }
+                        phone {
+                            label
+                            link
+                        }
+                        twitter {
+                            label
+                            link
+                        }
+                        website {
+                            label
+                            link
+                        }
                     }
                 }
                 blocks {
