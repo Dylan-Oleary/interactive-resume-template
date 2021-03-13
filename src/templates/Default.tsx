@@ -31,7 +31,7 @@ const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
                     sticky
                 />
                 <div className="w-full md:w-3/4">
-                    <div className="p-8 space-y-6">
+                    <div className="p-4 space-y-6 md:p-8">
                         <div className="hidden md:block">
                             <Title className="text-primary">
                                 {person.firstName} {person.lastName}
@@ -46,7 +46,7 @@ const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
                                 </div>
                             </Header>
                         </div>
-                        <div className="space-y-6">
+                        <div className="space-y-8">
                             {blocks
                                 .sort((a, b) => a?.order - b?.order)
                                 .map(({ content, icon, title }, index) => (
@@ -64,7 +64,7 @@ const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
                                         title={
                                             <Header
                                                 className="font-semibold"
-                                                type={HeaderType.H2}
+                                                type={HeaderType.H3}
                                                 underline={
                                                     <Divider
                                                         className="w-24 h-0.75 ml-2 -mt-1 font-bold rounded bg-block-header"
@@ -76,9 +76,6 @@ const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
                                             >
                                                 {title}
                                             </Header>
-                                        }
-                                        showDivider={
-                                            index !== blocks.length - 1
                                         }
                                     />
                                 ))}

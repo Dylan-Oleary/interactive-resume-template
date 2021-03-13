@@ -29,7 +29,7 @@ const ContentBlock: FC<IContentBlockProps> = ({
     title = "Content Block",
     icon
 }) => (
-    <div>
+    <div className="p-4 border border-gray-800 rounded-md shadow-md border-opacity-5">
         <div className={`${icon ? "flex" : ""} items-center text-block-header`}>
             <div className="mr-2">{icon && icon}</div>
             <div>{title}</div>
@@ -38,7 +38,9 @@ const ContentBlock: FC<IContentBlockProps> = ({
             {content.map((content, index) => (
                 <div
                     key={`${title}-${content.title}-${index}`}
-                    className="w-full mt-12 lg:mt-6 lg:w-5/12"
+                    className={`w-full ${
+                        index === 0 ? "mt-6" : "mt-12"
+                    } lg:mt-6 lg:w-5/12`}
                 >
                     <div className="font-light leading-none text-block-content-text">
                         {dayjs(content.startDate)
@@ -52,12 +54,12 @@ const ContentBlock: FC<IContentBlockProps> = ({
                             : "Present"}
                     </div>
                     <Header
-                        type={HeaderType.H4}
+                        type={HeaderType.H5}
                         className="font-medium text-block-primary-text"
                     >
                         {content.title}
                     </Header>
-                    <p className="mt-4 text-block-content-text">
+                    <p className="mt-2 md:mt-4 text-block-content-text">
                         {content.summary}
                     </p>
                 </div>
