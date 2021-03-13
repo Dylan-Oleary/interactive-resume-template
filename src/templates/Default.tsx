@@ -21,14 +21,15 @@ const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
     return (
         <div className="flex flex-col w-full h-screen">
             <Seo data={meta} />
-            <main className="flex flex-grow">
+            <main className="relative flex flex-col flex-grow md:flex-row">
                 <VerticalProfile
                     width={VerticalProfileWidth["1/4"]}
                     person={person}
                     useGradient
+                    sticky
                 />
-                <div className="w-3/4 p-8 space-y-6">
-                    <div>
+                <div className="w-full p-8 space-y-6 md:w-3/4">
+                    <div className="hidden md:block">
                         <Title className="text-primary">
                             {person.firstName} {person.lastName}
                         </Title>

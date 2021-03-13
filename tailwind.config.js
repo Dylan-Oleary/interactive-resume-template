@@ -34,6 +34,9 @@ module.exports = {
                 h4: "1.5rem",
                 h5: "1.31rem",
                 h6: "1.18rem"
+            },
+            minWidth: {
+                "vertical-profile": "375px"
             }
         }
     },

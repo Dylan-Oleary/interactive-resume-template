@@ -38,7 +38,7 @@ const ContentBlock: FC<IContentBlockProps> = ({
             {content.map((content, index) => (
                 <div
                     key={`${title}-${content.title}-${index}`}
-                    className="w-1/2 mt-6"
+                    className="w-full mt-12 lg:mt-6 lg:w-5/12"
                 >
                     <div className="font-light leading-none text-block-content-text">
                         {dayjs(content.startDate)
