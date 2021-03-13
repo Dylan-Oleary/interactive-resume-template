@@ -161,7 +161,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                     )}
 
                     {/* Resume Download Links */}
-                    <div>
+                    {/* <div>
                         <Header
                             className="hidden font-semibold md:block"
                             type={HeaderType.H3}
@@ -174,7 +174,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                         >
                             Download
                         </Header>
-                    </div>
+                    </div> */}
 
                     {/* Desktop Links */}
                     {Object.keys(links).length > 0 && (
@@ -196,7 +196,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     <Link
                                         href={links.email.link}
                                         openNewTab
-                                        className="flex items-center"
+                                        className="flex items-center transition ease-in-out duration-250 text-nav-text hover:text-primary-lightest"
                                     >
                                         <EmailIcon className="w-7 h-7" />
                                         <span className="ml-2">
@@ -208,7 +208,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     <Link
                                         href={links.twitter.link}
                                         openNewTab
-                                        className="flex items-center"
+                                        className="flex items-center transition ease-in-out duration-250 text-nav-text hover:text-primary-lightest"
                                     >
                                         <TwitterIcon className="w-7 h-7" />
                                         <span className="ml-2">
@@ -220,7 +220,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     <Link
                                         href={links.facebook.link}
                                         openNewTab
-                                        className="flex items-center"
+                                        className="flex items-center transition ease-in-out duration-250 text-nav-text hover:text-primary-lightest"
                                     >
                                         <FacebookIcon className="w-7 h-7" />
                                         <span className="ml-2">
@@ -232,7 +232,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     <Link
                                         href={links.instagram.link}
                                         openNewTab
-                                        className="flex items-center"
+                                        className="flex items-center transition ease-in-out duration-250 text-nav-text hover:text-primary-lightest"
                                     >
                                         <InstagramIcon className="w-7 h-7" />
                                         <span className="ml-2">
@@ -244,7 +244,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     <Link
                                         href={links.linkedin.link}
                                         openNewTab
-                                        className="flex items-center"
+                                        className="flex items-center transition ease-in-out duration-250 text-nav-text hover:text-primary-lightest"
                                     >
                                         <LinkedinIcon className="w-7 h-7" />
                                         <span className="ml-2">
@@ -256,7 +256,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     <Link
                                         href={links.phone.link}
                                         openNewTab
-                                        className="flex items-center"
+                                        className="flex items-center transition ease-in-out duration-250 text-nav-text hover:text-primary-lightest"
                                     >
                                         <PhoneIcon className="w-7 h-7" />
                                         <span className="ml-2">
@@ -268,7 +268,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     <Link
                                         href={links.website.link}
                                         openNewTab
-                                        className="flex items-center"
+                                        className="flex items-center transition ease-in-out duration-250 text-nav-text hover:text-primary-lightest"
                                     >
                                         <WebIcon className="w-7 h-7" />
                                         <span className="ml-2">

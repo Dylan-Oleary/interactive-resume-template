@@ -6,6 +6,8 @@ import {
     ContentBlock,
     Divider,
     DividerSpacing,
+    Footer,
+    FooterSpacing,
     Header,
     HeaderType,
     Icon,
@@ -28,53 +30,64 @@ const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
                     useGradient
                     sticky
                 />
-                <div className="w-full p-8 space-y-6 md:w-3/4">
-                    <div className="hidden md:block">
-                        <Title className="text-primary">
-                            {person.firstName} {person.lastName}
-                        </Title>
-                        <Header type={HeaderType.H2} className="leading-none">
-                            <div className="flex text-block-primary-text">
-                                <span>{person.position}</span>
-                                <span className="my-auto h-0.25 bg-divider flex-grow ml-16"></span>
-                            </div>
-                        </Header>
-                    </div>
-                    <div className="space-y-6">
-                        {blocks
-                            .sort((a, b) => a?.order - b?.order)
-                            .map(({ content, icon, title }, index) => (
-                                <ContentBlock
-                                    key={`$content-block-${index}`}
-                                    content={content}
-                                    icon={
-                                        icon ? (
-                                            <Icon
-                                                icon={icon}
-                                                className="p-2 text-white rounded-full bg-block-header"
-                                            />
-                                        ) : null
-                                    }
-                                    title={
-                                        <Header
-                                            className="font-semibold"
-                                            type={HeaderType.H2}
-                                            underline={
-                                                <Divider
-                                                    className="w-24 h-0.75 ml-2 -mt-1 font-bold rounded bg-block-header"
-                                                    spacing={
-                                                        DividerSpacing.None
-                                                    }
+                <div className="w-full md:w-3/4">
+                    <div className="p-8 space-y-6">
+                        <div className="hidden md:block">
+                            <Title className="text-primary">
+                                {person.firstName} {person.lastName}
+                            </Title>
+                            <Header
+                                type={HeaderType.H2}
+                                className="leading-none"
+                            >
+                                <div className="flex text-block-primary-text">
+                                    <span>{person.position}</span>
+                                    <span className="my-auto h-0.25 bg-divider flex-grow ml-16"></span>
+                                </div>
+                            </Header>
+                        </div>
+                        <div className="space-y-6">
+                            {blocks
+                                .sort((a, b) => a?.order - b?.order)
+                                .map(({ content, icon, title }, index) => (
+                                    <ContentBlock
+                                        key={`$content-block-${index}`}
+                                        content={content}
+                                        icon={
+                                            icon ? (
+                                                <Icon
+                                                    icon={icon}
+                                                    className="p-2 text-white rounded-full bg-block-header"
                                                 />
-                                            }
-                                        >
-                                            {title}
-                                        </Header>
-                                    }
-                                    showDivider={index !== blocks.length - 1}
-                                />
-                            ))}
+                                            ) : null
+                                        }
+                                        title={
+                                            <Header
+                                                className="font-semibold"
+                                                type={HeaderType.H2}
+                                                underline={
+                                                    <Divider
+                                                        className="w-24 h-0.75 ml-2 -mt-1 font-bold rounded bg-block-header"
+                                                        spacing={
+                                                            DividerSpacing.None
+                                                        }
+                                                    />
+                                                }
+                                            >
+                                                {title}
+                                            </Header>
+                                        }
+                                        showDivider={
+                                            index !== blocks.length - 1
+                                        }
+                                    />
+                                ))}
+                        </div>
                     </div>
+                    <Footer
+                        spacing={FooterSpacing.SM}
+                        text={`${person.firstName} ${person.lastName}`}
+                    />
                 </div>
             </main>
         </div>
