@@ -82,7 +82,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     openNewTab
                                     className="flex items-center"
                                 >
-                                    <EmailIcon className="w-7 h-7" />
+                                    <EmailIcon className="w-6 h-6 md:w-7 md:h-7" />
                                 </Link>
                             )}
                             {links.twitter && (
@@ -91,7 +91,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     openNewTab
                                     className="flex items-center"
                                 >
-                                    <TwitterIcon className="w-7 h-7" />
+                                    <TwitterIcon className="w-6 h-6 md:w-7 md:h-7" />
                                 </Link>
                             )}
                             {links.facebook && (
@@ -100,7 +100,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     openNewTab
                                     className="flex items-center"
                                 >
-                                    <FacebookIcon className="w-7 h-7" />
+                                    <FacebookIcon className="w-6 h-6 md:w-7 md:h-7" />
                                 </Link>
                             )}
                             {links.instagram && (
@@ -109,7 +109,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     openNewTab
                                     className="flex items-center"
                                 >
-                                    <InstagramIcon className="w-7 h-7" />
+                                    <InstagramIcon className="w-6 h-6 md:w-7 md:h-7" />
                                 </Link>
                             )}
                             {links.linkedin && (
@@ -118,7 +118,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     openNewTab
                                     className="flex items-center"
                                 >
-                                    <LinkedinIcon className="w-7 h-7" />
+                                    <LinkedinIcon className="w-6 h-6 md:w-7 md:h-7" />
                                 </Link>
                             )}
                             {links.phone && (
@@ -127,7 +127,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     openNewTab
                                     className="flex items-center"
                                 >
-                                    <PhoneIcon className="w-7 h-7" />
+                                    <PhoneIcon className="w-6 h-6 md:w-7 md:h-7" />
                                 </Link>
                             )}
                             {links.website && (
@@ -136,7 +136,7 @@ const VerticalProfile: FC<IVerticalProfileProps> = ({
                                     openNewTab
                                     className="flex items-center"
                                 >
-                                    <WebIcon className="w-7 h-7" />
+                                    <WebIcon className="w-6 h-6 md:w-7 md:h-7" />
                                 </Link>
                             )}
                         </div>
