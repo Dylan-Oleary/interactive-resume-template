@@ -5,6 +5,7 @@ interface IBaseTemplateProps {
         meta: ISiteMetaData;
         person: IPerson;
         blocks: IBlock[];
+        contact?: IContact;
     };
 }
 
@@ -48,6 +49,21 @@ interface IBlockContent {
     order: number;
 }
 
+interface IContact {
+    title: string;
+    summary?: string;
+    buttonText?: string;
+    inputs: IContactInput[];
+}
+
+interface IContactInput {
+    type: "textarea" | "text" | "email";
+    label: string;
+    name: string;
+    isRequired: boolean;
+    placeholder?: string;
+}
+
 interface ISiteMetaData {
     author: string;
     description: string;
@@ -61,6 +77,8 @@ export {
     IBaseTemplateProps,
     IBlock,
     IBlockContent,
+    IContact,
+    IContactInput,
     IPerson,
     IPersonLink,
     IPersonLinks,

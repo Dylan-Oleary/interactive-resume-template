@@ -1,4 +1,5 @@
 export * from "./Avatar";
+export * from "./ContactForm";
 export * from "./ContentBlock";
 export * from "./Divider";
 export * from "./Footer";

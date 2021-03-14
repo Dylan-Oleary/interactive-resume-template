@@ -46,6 +46,27 @@ exports.createSchemaCustomization = ({ actions }) => {
             summary: String
             order: Int!
         }
+
+        enum FormInput {
+            text
+            email
+            textarea
+        }
+
+        type DataJsonFormInput implements Node {
+            type: FormInput!
+            label: String!
+            name: String!
+            isRequired: Boolean!
+            placeholder: String
+        }
+
+        type DataJsonContact implements Node {
+            title: String!
+            summary: String
+            buttonText: String
+            inputs: [DataJsonFormInput]
+        }
   `;
 
     createTypes(typeDefs);
@@ -110,6 +131,18 @@ exports.createPages = async ({ actions, graphql }) => {
                         order
                     }
                 }
+                contact {
+                    title
+                    summary
+                    buttonText
+                    inputs {
+                        type
+                        label
+                        name
+                        isRequired
+                        placeholder
+                    }
+                }
             }
             site {
                 siteMetadata {
@@ -166,7 +199,8 @@ exports.createPages = async ({ actions, graphql }) => {
                 ...dataJson.person,
                 profileImageData:
                     imageData.file?.childImageSharp?.gatsbyImageData
-            }
+            },
+            contact: dataJson?.contact || null
         }
     });
 };

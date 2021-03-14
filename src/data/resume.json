@@ -99,5 +99,33 @@
                 }
             ]
         }
-    ]
+    ],
+    "contact": {
+        "title": "Contact Me",
+        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum velit. Etiam bibendum blandit posuere.",
+        "buttonText": "Submit",
+        "inputs": [
+            {
+                "type": "text",
+                "label": "Name",
+                "name": "name",
+                "isRequired": true,
+                "placeholder": "Enter name"
+            },
+            {
+                "type": "email",
+                "label": "Email",
+                "name": "email",
+                "isRequired": true,
+                "placeholder": "Enter email address"
+            },
+            {
+                "type": "textarea",
+                "label": "Message",
+                "name": "message",
+                "isRequired": false,
+                "placeholder": "Enter emessage"
+            }
+        ]
+    }
 }

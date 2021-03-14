@@ -3,6 +3,7 @@ import "fontsource-roboto";
 
 import { IBaseTemplateProps } from "./index";
 import {
+    ContactForm,
     ContentBlock,
     Divider,
     DividerSpacing,
@@ -18,7 +19,7 @@ import {
 } from "../components";
 
 const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
-    const { blocks, meta, person } = pageContext;
+    const { blocks, meta, person, contact } = pageContext;
 
     return (
         <div className="flex flex-col w-full h-screen">
@@ -80,6 +81,9 @@ const Default: FC<IBaseTemplateProps> = ({ pageContext }) => {
                                     />
                                 ))}
                         </div>
+                        {contact && contact?.inputs?.length > 0 && (
+                            <ContactForm contact={contact} />
+                        )}
                     </div>
                     <Footer
                         spacing={FooterSpacing.SM}
